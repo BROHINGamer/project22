@@ -15,8 +15,11 @@ function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
 	
+	var package_options={
+	restitution=1.0;
+	}
 
-	packageSprite=createSprite(width/2, 80, 10,10);
+	packageSprite=createSprite(width/2, 80, 10,10,package_options);
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
 
@@ -58,7 +61,7 @@ function keyPressed() {
  if (keyCode === DOWN_ARROW) {
     // Look at the hints in the document and understand how to make the package body fall only on
 	packageSprite.scale=0.1;
-	packageSprite.setStatic(packageBody,isStatic=false);
+	Matter.Body.setStatic(packageBody, false); 
   }
 }
 
