@@ -16,7 +16,7 @@ function setup() {
 	rectMode(CENTER);
 	
 	var package_options={
-	restitution=1.0;
+	restitution=1;
 	}
 
 	packageSprite=createSprite(width/2, 80, 10,10,package_options);
