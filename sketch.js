@@ -16,7 +16,7 @@ function setup() {
 	rectMode(CENTER);
 	
 	var package_options={
-	restitution=1;
+	restitution=0.8;
 	}
 
 	packageSprite=createSprite(width/2, 80, 10,10,package_options);
@@ -27,8 +27,6 @@ function setup() {
 	helicopterSprite.addImage(helicopterIMG)
 	helicopterSprite.scale=0.6
 
-	groundSprite=createSprite(width/2, height-35, width,10);
-	groundSprite.shapeColor=color(255)
 
 
 	engine = Engine.create();
